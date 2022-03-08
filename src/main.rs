@@ -36,4 +36,25 @@ fn main() {
             println!("Error encountered when capturing input {}", e);
         }
     }
+    printing_basics()
+}
+
+fn printing_basics() {
+    println!("--------------------------------------------------");
+    println!("--------------------------------------------------");
+    println!("Printing Basics");
+    // Formatting
+    println!("My name is {} and I am {} years old", "John", 29);
+    // Expressions
+    println!("a + b = {}", 2+5);
+    // Positional arguments
+    println!("{0} has a {1} and {0} has a {2}", "Alex", "cat", "dog");
+    // Named arguments®
+    println!("{name} {surname}", surname="Smith", name="Alex");
+    // Printing traits
+    println!("{0} decimal is Binary {:b}, Hex {:x}, Octal {:o}", 50, 50, 50);
+    // Debug i.e. print complex structures
+    println!("Array {:?}", [1, 2, 3]);
+    println!("--------------------------------------------------");
+    println!("--------------------------------------------------");
 }
