@@ -3,16 +3,13 @@
 use std::io::{stdout, stdin, BufWriter};
 use ferris_says::say; // from the dependencies in toml file
 
-/// main function for this crate(module)
+/// main function for this crate(module).
 fn main() {
     //! # Main function
-    //!
     //! ```
     //! fn main()
     //! ```
-    //!
     //! Reads user name as input and generates message by ferris.
-    //!
 
     // Creating a mutable string as new
     let mut input = String::new();
@@ -39,7 +36,13 @@ fn main() {
     printing_basics()
 }
 
+/// function showcasing different printing techniques in Rust.
 fn printing_basics() {
+    //! # Printing Basics
+    //! ```
+    //! fn printing_basics()
+    //! ```
+    //! This function shows all printing basics with examples.
     println!("--------------------------------------------------");
     println!("--------------------------------------------------");
     println!("Printing Basics");
