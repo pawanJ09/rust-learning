@@ -1,4 +1,5 @@
 #[allow(unused_imports)]
+#[allow(unused_mut)]
 
 use std::io::{stdout, stdin, BufWriter};
 use ferris_says::say; // from the dependencies in toml file
@@ -33,7 +34,8 @@ fn main() {
             println!("Error encountered when capturing input {}", e);
         }
     }
-    printing_basics()
+    printing_basics();
+    variable_basics();
 }
 
 /// function showcasing different printing techniques in Rust.
@@ -58,6 +60,36 @@ fn printing_basics() {
     println!("{0} decimal is Binary {:b}, Hex {:x}, Octal {:o}", 50, 50, 50);
     // Debug i.e. print complex structures
     println!("Array {:?}", [1, 2, 3]);
+    println!("--------------------------------------------------");
+    println!("--------------------------------------------------");
+}
+
+fn variable_basics() {
+    println!("--------------------------------------------------");
+    println!("--------------------------------------------------");
+    println!("Variable Basics");
+    let name = "Maximus";
+    let age = 33;
+    // Specifying type explicitly to accommodate large int capacity
+    let salary:i64 = 150000000;
+    /*
+    By default the variables in Rust are immutable hence the below commented code will result in
+    compile time error.
+     */
+    // age = 35;
+    let mut new_age = 33;
+    println!("Name: {name}\tAge: {age}\t mutable New Age: {new_age}\tSalary: {salary}");
+    new_age = 35;
+    println!("After updating new_age variable value");
+    println!("Name: {name}\tAge: {age}\t mutable New Age: {new_age}\tSalary: {salary}");
+    // Shadowing is allowed with different types as well and not only of same type
+    let color = "Red";
+    println!("Color: {color}");
+    let color = 222;
+    println!("Color: {color}");
+    //Declaring multiple variables simultaneously
+    let(a, b, c) = (1, "abc", 2.345);
+    println!("a: {a}, b: {b}, c: {c}");
     println!("--------------------------------------------------");
     println!("--------------------------------------------------");
 }
