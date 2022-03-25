@@ -1,3 +1,8 @@
+// The allow is applicable for crate(entire file) since it has macro [!]
+#![allow(unused_variables)]
+#![allow(unused_assignments)]
+
+// This allow is only associated to the functions
 #[allow(unused_imports)]
 #[allow(unused_mut)]
 
@@ -96,6 +101,9 @@ fn variable_basics() {
     //Declaring multiple variables simultaneously
     let(a, b, c) = (1, "abc", 2.345);
     println!("a: {a}, b: {b}, c: {c}");
+    // Commenting below statement since Rust will not do automatic type conversion
+    // let pi: f32 = 4;
+    println!("pi: f32 = 4 will result in error since mismatched type");
     println!("--------------------------------------------------");
     println!("--------------------------------------------------");
 }
