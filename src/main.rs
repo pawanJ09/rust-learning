@@ -113,6 +113,30 @@ fn variable_basics() {
     println!("Single character {character}");
     let emoji_char = '\u{1F601}';
     println!("Emoji character {emoji_char}");
+    // String slices are variables that are defined as &str or &'static str.
+    // String slices are immutable but can be made mutable using mut keyword.
+    let cat: &'static str = "Fluffy";
+    println!("&str slice {cat}");
+    let mut cats = "Fluffies";
+    cats = "Fluffiess";
+    println!("Mutable &str slice {cats}");
+    // String objects are mutable by default
+    let dog = String::new();
+    let mut dog = String::from("Rex");
+    println!("String object {}", dog);
+    println!("Length of &str {} and String {}", cat.len(), dog.len());
+    // These functions are not applicable to string slices
+    dog.push(' ');
+    dog.push_str(" is a Dog");
+    let msg = format!("{} who is faithful", dog);
+    println!("Print using format!() macro {}", msg);
+    /*
+    Constant needs to be in upper case, define data type, shadowing is not permitted and can be
+    global or local scope
+     */
+    const URL: &str = "www.google.com";
+    // const URL : &str = "www.yahoo.com";
+    println!("Constant example {}", URL);
     println!("--------------------------------------------------");
     println!("--------------------------------------------------");
 }
