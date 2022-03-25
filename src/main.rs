@@ -104,6 +104,15 @@ fn variable_basics() {
     // Commenting below statement since Rust will not do automatic type conversion
     // let pi: f32 = 4;
     println!("pi: f32 = 4 will result in error since mismatched type");
+    // Number separator. It will print without separator but only for improving program readability.
+    let amount = 1_000_000;
+    println!("Amount without number separators {}", amount);
+    let is_day = true;
+    println!("Boolean is_day {is_day}");
+    let character = 'A';
+    println!("Single character {character}");
+    let emoji_char = '\u{1F601}';
+    println!("Emoji character {emoji_char}");
     println!("--------------------------------------------------");
     println!("--------------------------------------------------");
 }
