@@ -64,7 +64,13 @@ fn printing_basics() {
     println!("--------------------------------------------------");
 }
 
+/// function with different ways to handle variables
 fn variable_basics() {
+    //! # Variable Basics
+    //! ```
+    //! fn variable_basics()
+    //! ```
+    //! This function shows all ways to handle mutable/immutable variables.
     println!("--------------------------------------------------");
     println!("--------------------------------------------------");
     println!("Variable Basics");
